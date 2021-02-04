@@ -1,6 +1,6 @@
 # day01
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled.png)
+![1](https://user-images.githubusercontent.com/63957819/106882330-fbbd4900-6721-11eb-821a-ad6f7c6d07ca.png)
 
 8888포트 번호를 열고 톰캣 서버가 기다리고 있는데 배포되어 있는 프로젝트들을 보면은 myfront라는 프로젝트였고 이 프로젝트에 semanticcssjq.html, login.html, images/logo.jpg 가 있다. WB에서 주소를 접속할 서버ip(http://127.0.0.1:8888/myfront/semanticcssjq.html)로 정확히 들어가야 한다. Network가 요청하고 찾아서 html내용이 그대로 응답이 되고 응답 내용을 렌더링 엔진에게 맡긴다.
 
@@ -12,7 +12,7 @@
 
 jQuery로 $.ajax( ); 를 쓰면 된다.
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%201.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%201.png)
+![2](https://user-images.githubusercontent.com/63957819/106882338-fcee7600-6721-11eb-88ed-34ad5226ff31.png)
 
 프로젝트 안에 들어갈 수 있는 것은 Servlet이나 JSP 자바 기반의 기술이 들어갈 수 있다.
 
@@ -28,13 +28,13 @@ html, css, image파일 등 클라이언트에게 내용이 고스란히 응답�
 
 ---
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%202.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%202.png)
+![3](https://user-images.githubusercontent.com/63957819/106882340-fd870c80-6721-11eb-9a91-994f4ef394ed.png)
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%203.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%203.png)
+![4](https://user-images.githubusercontent.com/63957819/106882343-fd870c80-6721-11eb-94eb-3c1651da2a4c.png)
 
 프로젝트를 둘로 쪼개자 새로운 프로젝트 이름은 myback이다.  여기에는 servlet하고 jsp가 들어갈 것이다. servelt용, jsp용 api를 제공해주는 그 api제공을 4.0버전을 사용 하겠다라는 뜻 
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%204.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%204.png)
+![5](https://user-images.githubusercontent.com/63957819/106882345-fe1fa300-6721-11eb-8918-435f519b4020.png)
 
 톰켓, 레진, 웹로직, 웹스피어, 제우스는 웹로 서블릿/jsp 종류들이다.  아파치는 PHP, IIS는 Asp.NET이 있다. servlet/jsp를 실행시켜줄 수 있는 엔진이 톰캣, 레진, 웹로직, 웹스피어, 제우스가 있는 거다. 
 
@@ -46,33 +46,33 @@ html, css, image파일 등 클라이언트에게 내용이 고스란히 응답�
 
 ---
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%205.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%205.png)
+![6](https://user-images.githubusercontent.com/63957819/106882347-fe1fa300-6721-11eb-8e19-7f04f4e7c397.png)
 
 서블릿 버전을 2.5 버전으로 내려보자 하위 버전으로 만들어야 구조 이해하기 편하다
 
 PATH에 해당하는 값을 Context root로 결정한다. deployement descriptor 배치 기술서 인데 어떻게 배치할거에요라고 적어 놓은 문서인데 그 이름이 web.xml 체크박스 해주면 된다.
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%206.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%206.png)
+![7](https://user-images.githubusercontent.com/63957819/106882352-feb83980-6721-11eb-86a3-83c28a5244d0.png)
 
 servlet-api.jar은 자바 쪽에서 제공되는 서블릿 api용 압축 파일이다. 톰켓도 자바 쪽에서 제공되는 api를 이용해서 구현해야 하기 때문에 해놨을 거다. 이 압축 파일이 톰켓에도 있고 제우스에도 있다. 그 압축 파일을 구현한 압축 파일들도 있다.
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%207.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%207.png)
+![8](https://user-images.githubusercontent.com/63957819/106882353-feb83980-6721-11eb-8ffe-f6366c0797a1.png)
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%208.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%208.png)
+![9](https://user-images.githubusercontent.com/63957819/106882355-ff50d000-6721-11eb-8e49-e0837d32be9d.png)
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%209.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%209.png)
+![10](https://user-images.githubusercontent.com/63957819/106882357-ffe96680-6721-11eb-8940-ee784259de9c.png)
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2010.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2010.png)
+![11](https://user-images.githubusercontent.com/63957819/106882358-ffe96680-6721-11eb-986d-d5a0c8c503be.png)
 
 부모 HttpServlet로부터 상속 받는다 대표 메서드가 init, destory, service, doGet, doPost 메서드가 있다. 부모가 갖고 있는 메서드를 그냥 상속 받아 쓰고 있는 게 아니라 재정의 오버라이딩 했다.
 
 서블릿에서는 메인 메서드가 없다
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2011.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2011.png)
+![12](https://user-images.githubusercontent.com/63957819/106882360-0081fd00-6722-11eb-9490-b957d61123d3.png)
 
 web.xml는 배치 기술서라 했다. servlet과 servlet-mapping은 eclipse가 자동 element를 만들어 준 거다.
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2012.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2012.png)
+![13](https://user-images.githubusercontent.com/63957819/106882362-0081fd00-6722-11eb-85c6-96a5cb9e640b.png)
 
 tomcat서버 안에는 servlet-api.jar jsp-api.jar 실행 엔진이 들어 있다.
 
@@ -84,19 +84,19 @@ JAVA EE를 완벽히 구현한 제품을 JAVA WAS부른다. Tocat은 WAS가 아�
 
 ---
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2013.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2013.png)
+![14](https://user-images.githubusercontent.com/63957819/106882364-011a9380-6722-11eb-9e50-d79aacc9c668.png)
 
 Add and Remove> myback을 오른쪽으로 배포
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2014.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2014.png)
+![15](https://user-images.githubusercontent.com/63957819/106882366-011a9380-6722-11eb-9ac1-bee8548e0914.png)
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2015.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2015.png)
+![16](https://user-images.githubusercontent.com/63957819/106882368-01b32a00-6722-11eb-8eda-72400b955a47.png)
 
 실행에 필요한 건 class이지 자바 소스코드가 아닌 거다. 클래스들만 톰켓서버에 배포된다.
 
 이클립스 구조를 add버튼 누르면 표준화 된 구조로 만들어지고 제우스, 웹로직 서버에 갖다 놓아도 똑같은 결과가 나타난다.
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2016.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2016.png)
+![17](https://user-images.githubusercontent.com/63957819/106882370-01b32a00-6722-11eb-8826-6c44c61e1160.png)
 
 WebContent에 a.html만들면 그대로 복사되서 myback밑에 가서 붙는다.
 
@@ -104,19 +104,19 @@ WebContent에 a.html만들면 그대로 복사되서 myback밑에 가서 붙는�
 
 WEB-INF 주소 url로 직접 경로 접근 못한다!!
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2017.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2017.png)
+![18](https://user-images.githubusercontent.com/63957819/106882373-024bc080-6722-11eb-9fae-86df6d74c3fd.png)
 
 http://localhost:8888/myback/first url 패턴 값을 적어주면 되는데 web.xml 파일에 명시되어 있다.
 
 생성자 호출과 init메서드가 또 호출 되는게 아니고 서비스라는 메소드만 재 호출이 된다. 그 얘기는 servlet형태 객체가 매번 만들어지는 게 아니라 한번만 만들어진다.
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2018.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2018.png)
+![19](https://user-images.githubusercontent.com/63957819/106882374-024bc080-6722-11eb-82b4-2862b73fbdbd.png)
 
 톰켓이 중지될 때 destroy메소드가 자동 호출 된다.
 
 ---
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2019.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2019.png)
+![20](https://user-images.githubusercontent.com/63957819/106882375-02e45700-6722-11eb-95e6-da29cf0e8f96.png)
 
 myfront, myback 웹 컨텍스트가 서로 별개이기 때문에 각각 Servlet Context객체가 만들어진다.
 
@@ -126,7 +126,7 @@ Servlet Context에 param이라는 인스턴스 변수가 있는데 이름과 값
 
  
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2020.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2020.png)
+![21](https://user-images.githubusercontent.com/63957819/106882378-037ced80-6722-11eb-9065-806fe1e40914.png)
 
 요청 했으면 서블릿이 응답을 해야 한다. 요청과 응답에 관련된 객체가 생성되는데 서블릿 용 객체가 존재한다 판단 됐을 때 **요청전용객체(HttpServletRequest)**와 **응답전용객체(HttpServletResponse)**가 자동 만들어진다. 이 놈들이 **서비스 메서드가 호출이 될 때** 첫 번째 인자로 **요청에 관련된 객체가 전달**이 되고 두 번째 인자로 **응답에 관련된 객체가 전달**이 된다.
 
@@ -202,7 +202,7 @@ public class FirstController extends HttpServlet {
 
 ---
 
-![day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2021.png](day01%20a772917e1d614930ba747ed320b03b3e/Untitled%2021.png)
+![22](https://user-images.githubusercontent.com/63957819/106882379-037ced80-6722-11eb-8e30-0a28e28473c6.png)
 
 요청 방식이 get방식으로 처리했을 때 doGet메서드만 오버라이딩 해주면 된다
 
