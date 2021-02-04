@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>myback</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>FirstController</display-name>
+    <servlet-name>FirstController</servlet-name>
+    <servlet-class>com.my.control.FirstController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstController</servlet-name>
+    <url-pattern>/first</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RequestTest</display-name>
+    <servlet-name>RequestTest</servlet-name>
+    <servlet-class>com.my.control.RequestTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestTest</servlet-name>
+    <url-pattern>/requesttest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResponseTest</display-name>
+    <servlet-name>ResponseTest</servlet-name>
+    <servlet-class>com.my.control.ResponseTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResponseTest</servlet-name>
+    <url-pattern>/responsetest</url-pattern>
+  </servlet-mapping>
+</web-app>
