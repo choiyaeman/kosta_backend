@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>고객 가입</title>
+        <!--jQuery사용-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script>
+        	$(function(){
+        		//DOM트리에서 class속성값이 btIdDupChk인 객체찾기
+        		var $btIdDupChk = $("input[class=btIdDupChk]");
+        		
+        		//중복확인 버튼객체에서 클릭 이벤트가 발생하면
+        		$btIdDupChk.click(function(){
+        			//DOM트리에서 name속성값이 id인 객체찾기
+        			var $idObj = $("input[name=id]");
+        			
+        			//아이디 입력값
+        			var idValue = $idObj.val();
+        			
+        			$.ajax({
+        				url : "./iddupchk",
+        				method : "post",
+        				data : {id: idValue},
+        				success:function(responseObj){
+        					if(responseObj.status == 1){ //아이디가 존재할 경우
+        						alert("이미 존재하는 아이디 입니다.");
+        					} else {
+        						alert("사용 가능한 아이디 입니다.");
+        					}
+        				},
+        				error: function(jqXHR) {
+        					alert(jqXHR.status);
+        				}
+        			});
+        		});
+        		
+        		//
+        	});
+        </script>
+        
+        <style>
+            body {background-color:wheat;}
+            input[type="button"] { background-color: mediumturquoise; color:white; }
+            input[type="submit"] { background-color: black; color:white; }
+            input[type="reset"] { background-color: black; color:white; }
+            #div2 { border:3px solid white; }
+        </style>
+    </head>
+    <body>
+        <div id="div2" style="background-color: white; max-width: 400px">
+        <form>
+            <label>아이디: <input type="text" name="id" placeholder="아이디를 입력하세요"></label>
+            <input type="button" value="중복확인" class="btIdDupChk"><br>
+            
+            <lable>비밀번호: <input type="password" name="pwd" placeholder="비밀번호를 입력하세요"></lable><br>
+            <lable>비밀번호확인: <input type="password" placeholder="비밀번호를 확인하세요"></lable><br>
+            
+            <label>이름: <input type="text" name="name" placeholder="이름을 입력하세요"></label><br>
+            
+            <label>우편번호: <input type="text" readonly size="5"></label>
+            <input type="button" value="우편번호검색" class="btsearchDoro"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="hidden" name="bulidingno" value="123456789012345678901234">
+            <input type="text" readonly value="서울시 중구 광화문로 세종대로"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="addr1" placeholder="상세주소를 입력하세요"><br>
+
+            <input type="submit" value="가입"> &nbsp;&nbsp;&nbsp;
+            <input type="reset" value="CLEAR">
+        </form>
+        </div>
+    </body>
+</html>

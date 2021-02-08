@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <title>jQuery로 작성한 로그인</title> -->
+        <!--jQuery사용-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $(function(){ //jQuery(document).ready(function(){})
+                //localStorage에 id라는 이름의 아이템이 있으면 그 값을 아이디 입력란에 보여준다.
+                let idValue = localStorage.getItem("id");
+                if(idValue != null || idValue != '') {
+                    //document.querySelector("input[name=id]").value = idValue;
+                    //$document.querySelector("input[name=id]").value(idValue);
+                    $("input[name=id]").val(idValue);
+                 }
+                 //DOM트리에서 type속성값이 checkbox인 input객체 찾기
+                 let $chkObj = $("input[type=checkbox]");
+
+                 //로그인버튼에서 클릭이벤트 발생하면 폼에서 서브밋 이벤트가 자동 발생한다.
+                 //DOM트리에서 form객체 찾기
+                 let $formObj = $("form");
+                 $formObj.submit(function(event) { //event기술한 목적은 기본 이벤트 처리기를 막기위해서이다.
+                     //checkbox가 선택되었는가 localstorage에 아이디값을 저장한다.
+                     //if($chkObj.checked){
+                     if($chkObj.prop("checked")) { //!주의. 체크박스가 선택되었는지 안되었는지 구분하려면 .prop메서드의 인자로 checked를 써야한다 그래야 선택여부를 확인 할 수있다
+                        let $idObj = $("input[name=id]");
+                        localStorage.setItem("id", $idObj.val());
+                    } else {
+                        //checkbox가 선택안되면 localstorage의 아이디값을 제거한다.
+                        localStorage.removeItem("id");
+                    }
+
+                    //입력된 아이디값
+                    var idValue = $("input[name=id]").val(); //서버로 전송될 id값
+
+                    //입력된 비밀번호값
+                    var pwdValue = $("input[name=pwd]").val(); //서버로 전송될 pwd값
+
+                    $.ajax({
+                       url: "./login", //'http://localhost:8888/myfront/login',  //요청URL
+                       method:"post", //요청방식
+                       //data : "id=" + idValue + "&pwd=" + pwdValue, // data : 서버로 전송할 데이터를 의미 //요청시 전달 데이터. 쿼리 스트링 형태로 전달
+                       data : {"id": idValue, "pwd": pwdValue}, // 문자열이 아니라 객체형태로 만들어서 전달
+                      // success:function(data){ // data는 응답내용, 자료형은 string        
+                      //  var responseObj = JSON.parse(data); // 반환값은 객체 타입이 된다. string값을 object로 변환
+                      success: function(responseObj) { //json객체 형태로 응답
+                          if(responseObj.status == 1) {
+                              alert("로그인 성공");
+                          } else {
+                              alert("로그인 실패");
+                          }
+                       },
+                       error:function(jqXHR){
+                          alert(jqXHR.status);
+                       }
+                    });
+                    //event.preventDefault(); //기본이벤트 처리 막자 
+                    return false; //!주의. event.preventDefault(); event.stopPropagation(); 두개의 효과를 다 포함하는 것이 return false이다.
+                 });
+            });
+        //     window.addEventListener("load", function() { //load이벤트가 발생 했다는 것은 dom트리가 완성됐다는 뜻
+        //         //localStorage에 id라는 이름의 아이템이 있으면 그 값을 아이디 입력란에 보여준다.
+        //         let idValue = localStorage.getItem("id");
+        //         if(idValue != null || idValue != '') {
+        //             document.querySelector("input[name=id]").value = idValue;
+        //         }
+        
+        //         //DOM트리에서 type속성값이 checkbox인 input객체 찾기
+        //         let chkObj = document.querySelector("input[type=checkbox]");
+        
+        //         //로그인버튼에서 클릭이벤트 발생하면 폼에서 서브밋 이벤트가 자동 발생한다. 
+        //         //DOM트리에서 form객체 찾기
+        //         let formObj = document.querySelector("form");
+        
+        //         formObj.addEventListener("submit", function(event) {
+        //             //checkbox가 선택되었는가 localstorage에 아이디값을 저장한다.
+        //             if(chkObj.checked) { //if(chkObj.checked == true){
+        //                 let idObj = document.querySelector("input[name=id]");
+        //                 localStorage.setItem("id", idObj.value);
+        //             } else {
+        //                 //checkbox가 선택안되면 localstorage의 아이디값을 제거한다.
+        //                 localStorage.removeItem("id");
+        //             }
+        //             event.preventDefault(); //기본이벤트 처리 막자  
+        //         });
+        //     });
+        // </script>
+
+        <style>
+             input[name="id"]{ background-color: yellow; }
+             input:not([type ="text"]) { background-color: green; color: white; }
+             /* form span.saveid{ color: blue; font-weight: bold;} */
+             /* form>label>input[type=checkbox]+span.saveid { color: blue; font-weight: bold; } */
+             form>label>input[type=checkbox]~span.saveid{ color: blue; font-weight: bold; }
+        </style>
+    </head>
+    <body>        
+    <div class="login">
+        <form>
+            <label>아이디<input type="text" name="id"></label><br>
+            <label>비밀번호<input type="password" name="pwd" maxlength="5"></label><br>
+            <label><input type="checkbox" checked>아이디 저장</label>
+            <input type="submit" value="로그인">
+        </form>
+    </div>
+    </body>
+</html>
