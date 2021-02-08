@@ -1,10 +1,10 @@
 # day02
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled.png)
+![1](https://user-images.githubusercontent.com/63957819/107196433-f6b80c80-6a35-11eb-8bbd-fb8413f93651.png)
 
 베포한 프로젝트를 웹컨텍스트라 부른다.  
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%201.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%201.png)
+![2](https://user-images.githubusercontent.com/63957819/107196438-f7e93980-6a35-11eb-991d-c785af1c4e33.png)
 
 톰켓의 conf 디렉토리에도 web.xml이 있다. web.xml을 웹 배치 기술서라고도 부른다. 
 
@@ -16,7 +16,7 @@
 
 서블릿 맵핑 엘리먼트를 보면 예를 들어 f.jsp 요청이 들어오는 경우 서블릿 네임이 jsp라 되어있고 jsp를 처리할 클래스가 누구인지 찾아보면 서블릿 엘리먼트 중에서 JspServlet 클래스로 되어있다. f.jsp 요청이 되면 JspServlet클래스가 처리해준다.
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%202.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%202.png)
+![3](https://user-images.githubusercontent.com/63957819/107196439-f881d000-6a35-11eb-8c5e-f77cd69a6801.png)
 
 요청이 들어왔을 때 DefaultServlet하는 일은 요청 된 자원을 찾는다. 예를 들어  a.html를 찾는다 그 자원의 내용을 한 줄 한 줄 그대로 응답한다. b.css를 post방식으로 요청한다면 doPost메서드가 b.css파일을 찾고 내용을 그대로 읽어서 쓰기 작업으로 응답을 한다. f.jsp를 get방식으로 요청하게 되면 요청된 자원인 f.jsp를 찾아서 한 줄 한 줄 내용을 읽어서 서버로 실행한다. 그리고 실행 결과 값을 클라이언트에게 응답한다.
 
@@ -48,7 +48,7 @@ welcome-file-list란 환영 파일 목록이다.
 .
 ```
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%203.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%203.png)
+![4](https://user-images.githubusercontent.com/63957819/107196440-f881d000-6a35-11eb-85b0-c20d09fc4d27.png)
 
 로그인을 처리해줄 서블릿 클래스를 만들어준다.
 
@@ -129,25 +129,25 @@ $.ajax({
 
 응답 형식을 application/json으로 바꿔버리면 클라이언트 json객체 형태로 응답을 받는다.
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%204.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%204.png)
+![5](https://user-images.githubusercontent.com/63957819/107196441-f91a6680-6a35-11eb-99ac-a76016540c76.png)
 
 CustomerService 서비스의 도움을 받을 거다. CustomerDAOOracle과 일을 할 데이터인 오라클이 있다.  
 
 CRUD가 DAO가 할 일이다. 서비스는 **기능 별**로 내 정보 보기, 아이디 검색 같은 기능은 서비스 단에 묶어서 사용하면 된다.  다르다 하면 서비스 메서드를 만들면 된다. 이러한 전체 작업이 톰켓에서 이루어져야 한다.
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%205.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%205.png)
+![6](https://user-images.githubusercontent.com/63957819/107196443-f9b2fd00-6a35-11eb-8eb1-99ab0b8e320e.png)
 
 LIB에 있는 ojdbc6를 apache-tomcat밑에 lib에 붙여 넣자
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%206.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%206.png)
+![7](https://user-images.githubusercontent.com/63957819/107196445-f9b2fd00-6a35-11eb-87f4-cdb61a1e7f63.png)
 
 MYSE에 jdbc1>src>com>my에 파일 복사해서 MYEE에 myback>src>com>my밑에 붙여 넣자
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%207.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%207.png)
+![8](https://user-images.githubusercontent.com/63957819/107196446-f9b2fd00-6a35-11eb-9947-e583d2a1f57f.png)
 
 sqlplus scott/tiger로 접속하여 해당 아이디, 비번 확인 후 
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%208.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%208.png)
+![9](https://user-images.githubusercontent.com/63957819/107196448-fa4b9380-6a35-11eb-82e9-b340cda4e7ec.png)
 
 위의 sqlplus에서 확인 한 아이디 비번을 넣어 확인 해보기
 
@@ -204,11 +204,11 @@ public class LoginServlet extends HttpServlet {
 
 ---
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%209.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%209.png)
+![10](https://user-images.githubusercontent.com/63957819/107196450-fa4b9380-6a35-11eb-94c1-6c106e3a0f67.png)
 
 singup.html을 myback프로젝트의 WEB-INF에다 붙여 넣지 말고 Webcontent에다 붙여 넣어야 한다.
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%2010.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%2010.png)
+![11](https://user-images.githubusercontent.com/63957819/107196454-fae42a00-6a35-11eb-9d6e-ac8fe57acf49.png)
 
 버튼이 클릭 되었을 때는 자바스크립트 이벤트 처리 해주고 요청 url을 /iddupchk, 요청 방식을 post방식, 이름은 id이고 사용자가 입력한 값이 abc로 전달이 되도록 해보자
 
@@ -216,7 +216,7 @@ com.my.contorl에 있는 IdDupchkServlet클래스를 만들고 CustomerService�
 
 아이디에 해당하는 고객이 있을 경우에는 status를 1값 json형식으로 응답할 것이다. 응답 내용은 자바스크립트 객체 형태로 status를 1값을 줄 건데 id가 존재할 경우 그 외의 경우는 id존재 안 할 경우는 status를 -1값으로 설정하자. 클릭에 대한 결과로는 아이디가 이미 존재할 경우에는 이미 존재하는 아이디 입니다를 경고 창에 보여주고  status가 1이 아닌 경우에는 사용한 아이디 입니다라고 경고 창에 보여주도록 하자.
 
-![day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%2011.png](day02%20e4b41bf6d12e44e18695035cc1adc2f3/Untitled%2011.png)
+![12](https://user-images.githubusercontent.com/63957819/107196455-fae42a00-6a35-11eb-8748-832bdceae9af.png)
 
 일반 버튼이 두 개나 있다 근데 첫 번째 버튼이 클릭 되었을 때 할 일임으로 구분하려고 id값 설정할 수도 있고 class설정, value 설정할 수 있다. class설정을 해주자!!
 
