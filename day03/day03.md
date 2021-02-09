@@ -85,7 +85,7 @@
 </html>
 ```
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled.png)
+![1](https://user-images.githubusercontent.com/63957819/107380928-a920ca00-6b31-11eb-8471-ff681961323a.png)
 
 반드시 id값 입력해야 하고 서버 쪽에서는 요청 시 전달 되었는가 꼭 확인해야 한다.
 
@@ -93,13 +93,13 @@
 
 required 속성은 반드시 입력되기를 원하는 입력 양식이다.
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%201.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%201.png)
+![2](https://user-images.githubusercontent.com/63957819/107380931-a920ca00-6b31-11eb-8ab3-2a547ef41666.png)
 
 경고 창이 나타나는 것을 볼 수 있다. required효과는 submit 버튼을 눌렀을 때만 발생한다.
 
 일반 버튼을 눌렀을 시 빈 문자열이 돼서 서버로 전송이 돼버린다. 
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%202.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%202.png)
+![3](https://user-images.githubusercontent.com/63957819/107380933-a9b96080-6b31-11eb-80dd-df67acc86fe2.png)
 
 중복 확인 버튼도 submit 버튼으로 만들거나, 일반 버튼으로 두되 아이디 직접 유효성 검사를 자바스크립트로 확인해야 한다. 유효성 검사를 통해 결과를 확인해보자~
 
@@ -204,7 +204,7 @@ required 속성은 반드시 입력되기를 원하는 입력 양식이다.
 </html>
 ```
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%203.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%203.png)
+![4](https://user-images.githubusercontent.com/63957819/107380935-aa51f700-6b31-11eb-9559-38242fc49118.png)
 
 우편번호 눌렀을 때의 도로 명 주소 찾기, 가입도 해야 한다. 가입 버튼이 무작정 화면에 보이지 않게 하자 사용 가능한 아이디일 경우만 보이게 하자
 
@@ -383,11 +383,11 @@ $(function(){
 </html>
 ```
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%204.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%204.png)
+![5](https://user-images.githubusercontent.com/63957819/107380936-aa51f700-6b31-11eb-94ea-7480488ae6e7.png)
 
 ajax요청이 아니라 새 창을 띄우는 거다. 클릭이 되면 window의 객체 open이라는 함수 이용 
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%205.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%205.png)
+![6](https://user-images.githubusercontent.com/63957819/107380938-aaea8d80-6b31-11eb-85fb-e1b61ffbea38.png)
 
 li기준으로 해서 자식 객체를 children으로 후손 객체로 find로 찾아낼 수 있다.
 
@@ -395,7 +395,7 @@ li기준으로 해서 자식 객체를 children으로 후손 객체로 find로 �
 
 실행결과>
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%206.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%206.png)
+![7](https://user-images.githubusercontent.com/63957819/107380941-aaea8d80-6b31-11eb-91c4-7c501051bf8b.png)
 
 ---
 
@@ -526,7 +526,7 @@ li기준으로 해서 자식 객체를 children으로 후손 객체로 find로 �
 </html>
 ```
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%207.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%207.png)
+![8](https://user-images.githubusercontent.com/63957819/107380889-a2925280-6b31-11eb-9621-68a668154dfb.png)
 
 가입이 클릭이 되면 submit버튼이 클릭이 되는 것이고 그리고 클릭이 되면 form객체의 submit이벤트가 자동 발생한다. 
 
@@ -534,9 +534,9 @@ serialize 라는게 직렬화 인데 form 객체 안에 있는 name속성인 id�
 
 사용자가 입력한 값이 프로퍼티 값으로 만들어지는 거다. 
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%208.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%208.png)
+![9](https://user-images.githubusercontent.com/63957819/107380897-a3c37f80-6b31-11eb-8011-b3c5d006bf2c.png)
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%209.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%209.png)
+![10](https://user-images.githubusercontent.com/63957819/107380900-a45c1600-6b31-11eb-906f-16fe2dd69747.png)
 
 action속성에 해당하는 url이 없으면 현재 사용중인 url로 이동하려고 한다.
 
@@ -546,7 +546,7 @@ method 속성이 없으면 default값이 get방식의 요청이다.
 
 실행결과>
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2010.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2010.png)
+![11](https://user-images.githubusercontent.com/63957819/107380902-a45c1600-6b31-11eb-9816-e1aeac85c860.png)
 
 404error가 뜬 것을 볼 수 있다.
 
@@ -889,37 +889,37 @@ public class SignupServlet extends HttpServlet {
     }
     ```
 
-    ![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2011.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2011.png)
+![12](https://user-images.githubusercontent.com/63957819/107380904-a4f4ac80-6b31-11eb-9d2b-96150fb23634.png)
 
-    ![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2012.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2012.png)
+![13](https://user-images.githubusercontent.com/63957819/107380905-a58d4300-6b31-11eb-9429-df7d17e6c614.png)
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2013.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2013.png)
+![14](https://user-images.githubusercontent.com/63957819/107380906-a58d4300-6b31-11eb-935e-4e9acfdf2afd.png)
 
 Sqldeveloper 데이터를 보면 값이 들어간 것을 확인할 수 있다.
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2014.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2014.png)
+![15](https://user-images.githubusercontent.com/63957819/107380908-a625d980-6b31-11eb-90ab-9595e90104e4.png)
 
 엑셀 데이터를 넣기위해 데이터 임포트 해주기
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2015.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2015.png)
+![16](https://user-images.githubusercontent.com/63957819/107380909-a625d980-6b31-11eb-99f4-f5182492f9fb.png)
 
 각각 차례대로 대상 테이블 이름에 맞게 맵핑 해준다. 
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2016.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2016.png)
+![17](https://user-images.githubusercontent.com/63957819/107380910-a6be7000-6b31-11eb-9d01-7b3d5fc1255e.png)
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2017.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2017.png)
+![18](https://user-images.githubusercontent.com/63957819/107380911-a6be7000-6b31-11eb-90d8-62c8e9b02daf.png)
 
 sido 컬럼의 자리수 조정 해준다.
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2018.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2018.png)
+![19](https://user-images.githubusercontent.com/63957819/107380914-a7570680-6b31-11eb-8859-67ba3dda79a7.png)
 
 다시 insert해주고 마지막에 commit 해주기
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2019.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2019.png)
+![20](https://user-images.githubusercontent.com/63957819/107380916-a7570680-6b31-11eb-8932-965646341e26.png)
 
 데이터가 들어간 것을 볼 수 있다.
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2020.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2020.png)
+![21](https://user-images.githubusercontent.com/63957819/107380920-a7ef9d00-6b31-11eb-9adc-40a49cf48a4f.png)
 
 **fk로 참조할 때는 부모의 pk를 참조**한다.
 
@@ -929,7 +929,7 @@ customer는 postal를 참조하는 자식 역할을 한다. 일대 다의 관계
 
 또 다른 sql구문 도출을 한다 하면 고객을 조회하되 **건물 별로 고객을 조회** 한다면 SELECT FROM JOIN WHERE buildingno='123~'; 구문을 만들 거다.
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2021.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2021.png)
+![22](https://user-images.githubusercontent.com/63957819/107380921-a7ef9d00-6b31-11eb-916b-e0cc6d334ae8.png)
 
 - Customer.java
 
@@ -1009,6 +1009,6 @@ public class Customer extends Person{
 
 실행결과>
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2022.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2022.png)
+![23](https://user-images.githubusercontent.com/63957819/107380923-a8883380-6b31-11eb-9a84-d68ffeb2e09f.png)
 
-![day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2023.png](day03%207baed4b1effd4a5a9a1be4ca1d4a22a1/Untitled%2023.png)
+![24](https://user-images.githubusercontent.com/63957819/107380927-a8883380-6b31-11eb-8693-e0598f740bb5.png)
