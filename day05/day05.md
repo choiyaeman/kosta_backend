@@ -4,11 +4,11 @@
 
 servlet객체에서 만들어낸 계산 값을 jsp페이지에서 응답을 하려면 그 계산 값을 같이 공유를 해야 한다. servlet과 jsp사이의 객체가 서로 다르다 보니 공유 공간이 필요 한다 requet객체를 사용.
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled.png)
+![1](https://user-images.githubusercontent.com/63957819/107923568-0941c100-6fb5-11eb-913c-ed0cf66fc818.png)
 
 jsp페이지가 응답을 하도록 응답은 html페이지 형태로..서블릿이 직접 응답하기에는 지저분 jsp페이지에게 역할 분담을 맡기자. servlet페이지에서는 페이지 이동 시키는 역할을 하자
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%201.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%201.png)
+![2](https://user-images.githubusercontent.com/63957819/107923573-0b0b8480-6fb5-11eb-92fb-9b6fbc5c2016.png)
 
 attribute는 저장되는 값이 java.lang 패키지의 Object 타입으로 upcasting돼서 저장이 된다.
 
@@ -83,7 +83,7 @@ Product p = (Product)request.getAttribute("p");
 
 실행결과>
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%202.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%202.png)
+![3](https://user-images.githubusercontent.com/63957819/107923575-0b0b8480-6fb5-11eb-9c31-5716c7d0047a.png)
 
 Servlet에서 제어의 역할이지 jsp에서 제어 역할은 아니다. jsp는 결과 값을 보여주는 역할로 마무리 한다. 
 
@@ -104,7 +104,7 @@ alert('<%=e.getMessage()%>');
 
 실행결과>
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%203.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%203.png)
+![4](https://user-images.githubusercontent.com/63957819/107923578-0ba41b00-6fb5-11eb-97aa-f036bdbf6074.png)
 
 '<%=e.getMessage()%>' → ''는 자바스크립트 문법이고 ''안에 있는 문법은 jsp문법이다. jsp문법이 먼저 실행이 되고 out.write 이런 내용으로 클라이언트에게 응답이 된 다음에 클라이언트에서 자바스크립트가 실행되는 구조이다.
 
@@ -320,7 +320,7 @@ alert('<%=e.getMessage()%>');
 </script>
 ```
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%204.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%204.png)
+![5](https://user-images.githubusercontent.com/63957819/107923580-0ba41b00-6fb5-11eb-96ed-627419baf5e5.png)
 
 페이지 지시자 에서 %와@이는 반드시 붙여야 한다. language속성은 java언어로 generate한다. 다른 언어로는 못한다. 기본 값이 자바이므로 항상 .java파일로만 만들어지게 되어있다. contentType은 응답 형식을 의미한다.language속성과 pageEncoding 생략 가능하다.
 
@@ -328,11 +328,11 @@ import, contentType 정도만 알아도 된다~
 
 errorPage속성은 현재 페이지에서 에러 발생하면 특정 페이지 그 즉시 자동 포워드, isErrorPage를 true로 주게 되면 일반 페이지가 아니라 에러처리전용페이지이다. exception이라는 미리 선언되어 있는 변수를 미리 사용할 수 있다
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%205.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%205.png)
+![6](https://user-images.githubusercontent.com/63957819/107923581-0c3cb180-6fb5-11eb-882b-c8d88511d2e7.png)
 
 out은 JspWriter으로 미리 선언이 되어있다. 그러면 out은 JspWriter타입인데 응답의 버퍼에 쓰기를 하는 거다. li 내용이 버퍼에 쌓이는 거다. 버퍼의 기본 크기는 8키로 바이트이다. forward가 될 때 버퍼 내용을 clear하고 이동을 하므로 errorresult.jsp로 forward가 되는 거다. 
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%206.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%206.png)
+![7](https://user-images.githubusercontent.com/63957819/107923583-0c3cb180-6fb5-11eb-9925-c4f1cb89d630.png)
 
 JSPWriter는 PrintWriter + BufferedWriter 합쳐 놓은 형태이다. BufferedWriter는 8kb이다. 클라이언트 쪽에게 응답을 할 때 out객체의 내부에 버퍼 크기가 8키로 바이트가 있는 거다. 버퍼가 다 쓰여지지 않는 상태에서 그 다음 코드를 실행.. 자동 forward될 때 기존 내용을 지워 버리고 에러 페이지로 포워드가 된다. 그러므로 결과 값으로 화면에 보이지 않는다. 
 
@@ -372,21 +372,21 @@ JSPWriter는 PrintWriter + BufferedWriter 합쳐 놓은 형태이다. BufferedWr
 
 지시자를 이용한 포함과 태그를 이용한 포함의 차이점? include directive를 이용은 jsp용 점 자바 파일이 만들어질 때 소스 코드에 포함이 되는 것이고, action태그를 이용하면 include메소드가 호출 될 때 즉 실행 시 포함이 되는 거다.
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%207.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%207.png)
+![8](https://user-images.githubusercontent.com/63957819/107923586-0cd54800-6fb5-11eb-8972-173bd4dacd8d.png)
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%208.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%208.png)
+![9](https://user-images.githubusercontent.com/63957819/107923590-0d6dde80-6fb5-11eb-94bc-d02de03c8b6c.png)
 
 b.jsp 점 자바 파일이 만들어지면  _jspService내부에 include 지시자 내용이 포함이 되고 출력하는 코드가 generate된다.
 
 c.jsp 태그를 이용해서 포함한다면 _jspService메소드가 만들어질 때 a.jsp가 전달이 되도록 코드로 만들어진다. 출력 하는 코드는 i변수가 없으므로 만들어지지 않아 에러가 발생한다. 컴파일 절차가 거쳐야 실행이 되는 거다. include메소드도 당연히 실행이 될 수 없다.
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%209.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%209.png)
+![10](https://user-images.githubusercontent.com/63957819/107923591-0d6dde80-6fb5-11eb-887e-d1eb1065b122.png)
 
 b.jsp 페이지에서 include 지시자를 이용해서 포함하고 int타입의 i변수를 99값을 대입하는 코드를 만들어 보면 자바에서 변수 선언이 중복되면 에러 클라이언트에게 500번오류가 나올것이고 . c.jsp같은 경우에도 i변수를 99값을 대입하는 코드를 만들고 _jspService안에 i변수가 선언되고 클라이언트에게 200 성공이 뜬다.
 
 실행 결과 값이 포함되기를 원한다 하면 태그를 이용. 여러 페이지에서 공통으로 쓰일 share 개념은 아니지만  필요한 변수, 타이틀 같은 경우 지시자를 사용한다.
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%2010.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%2010.png)
+![11](https://user-images.githubusercontent.com/63957819/107923593-0e067500-6fb5-11eb-9b4a-90d27f14907b.png)
 
 상품을 검색할 수 있도록 상품 번호로 또는 상품 이름으로 검색 할 수 있도록 검색란을 포함 시키고 싶다 이 바깥쪽 전체가 productlistresult라면 jsp페이지 안쪽에 searchproduct.jsp페이지를 포함을 시키고 싶다.
 
@@ -730,7 +730,7 @@ for(Product p: list) {
 </nav>
 ```
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%2011.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%2011.png)
+![12](https://user-images.githubusercontent.com/63957819/107923594-0e067500-6fb5-11eb-883b-224e984fb275.png)
 
 jsp:include태그는 jsp문법이라서 html파일에서 쓰면 안된다.  html은 jsp를 포함할 수 없다.
 
@@ -740,4 +740,4 @@ jsp:include태그는 jsp문법이라서 html파일에서 쓰면 안된다.  html
 
 실습>
 
-![day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%2012.png](day05%201c15b7a85caa4e84b637d64d8edec879/Untitled%2012.png)
+![13](https://user-images.githubusercontent.com/63957819/107923596-0e9f0b80-6fb5-11eb-993f-dee968d53fc7.png)
