@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>상품상세목록</title>
+        <style>
+             div.productdetail{
+                 box-sizing: border-box; /* 전체 넓이가 될 수 있다 */
+                 width: 100%;
+                 height: 300px;
+             }
+             div.productdetail>div.productdetail_img{
+                 width: 35%;
+                 float: left;
+             }
+             div.productdetail>div.productdetail_img>img{
+                 width: 100%;
+             }
+             div.productdetail>div.productdetail_info{
+                 width: 60%;
+                 float: right;
+             }
+             div.productdetail>div.productdetail_info>form>ul{
+                 list-style-type: none;
+                 padding-left: 10px;
+             }
+        </style>
+    </head>
+    <body>
+        <div class="productdetail">
+            <div class="productdetail_img">
+                <img src="./images/C0001.jpg" alt="나이트로 바닐라 크림">
+            </div>
+            <div class="productdetail_info">
+                <h1>나이트로 바닐라 크림</h1>
+                <hr>
+                <form>
+                    <input type="hidden" name="prod_no" value="C0001">
+                    <ul>
+                        <li>부드러운 목넘김의 나이트로 커피와 바닐라 크림의 매력을 한번에 느껴보세요!</li>
+                        <li>가격: 1,000</li>
+                        <li>수량: <input name="quantity" type="number" min="1" max="99" step="1" value="1" ></li>
+                        <li><input type="submit" value="장바구니넣기"></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
