@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>장바구니</title>
+        <style>
+            div.viewcart{
+                box-sizing: border-box;
+                width: 100%;
+                height: 300px;  /*부모쪽에 절대영역 크기 지정 */
+                /* height: 100%; 부모의 body에 크기가 지정 되어있지 않으므로 아무 효과가 안일어난다. */
+            }
+            div.viewcart>table{
+                width: 50%;
+                height: 100%; /* 부모영역 300px를 다 사용하겠다 의미 */
+                border-collapse: collapse; /* 하나의 테두리로 설정 */
+            }
+
+            div.viewcart>table, div.viewcart>table td, div.viewcart>table th{ /* 세개 요소를 선택하는거다..table요소하고 테이블 요소의 후손으로 td,tr요소를 선택해라*/
+                border: 1px solid;
+            }
+            div.viewcart>table tr{
+                vertical-align: bottom;
+            }
+            div.viewcart>table td.prod_price,
+            div.viewcart>table td.quantity,
+            div.viewcart>table td.amount,
+            div.viewcart>table td.total_amount{
+                text-align: right;
+            }
+            div.viewcart>table td.total_amount{
+                    font-weight: bold;
+                    color: red;
+                    border-color : black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="viewcart">
+            <h1>장바구니</h1>
+            <table>
+                <tr><th>상품번호</th>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                    <th>금액</th>
+                </tr>
+                <tr><td>C0001</td>
+                    <td>나이트로 바닐라 크림</td>
+                    <td class="prod_price">1,000</td>
+                    <td class="quantity">3</td>
+                    <td class="amount">3,000</td>
+                </tr>
+                <tr><td>C0003</td>
+                    <td>돌체 콜드 브루</td>
+                    <td class="prod_price">1,500</td>
+                    <td class="quantity">1</td>
+                    <td class="amount">1,500</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="total_amount">총금액: 4,500</td>
+                </tr>
+            </table>
+            <form>
+                <input type="submit" value="주문하기">
+            </form>
+        </div>
+    </body>
+</html>
