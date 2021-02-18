@@ -333,23 +333,23 @@
 
 실행결과>
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled.png)
+![1](https://user-images.githubusercontent.com/63957819/108333722-9afb3980-7214-11eb-9876-8275e10a6d38.png)
 
 첫 번째 방법으로 돔트리에서 버튼 객체가 만들어진 상태에서 이벤트 처리와 두 번째 방법으로 첫 번째와 반대로 메뉴들이 클릭 되기 전 상태에 DOM트리에 객체가 있을리 없다. DOM 트리의 객체가 없으면 이벤트 처리가 효과가 없다. 효과를 내려면 DOM에 향후 추가될 자식 객체의 이벤트 처리를 하면 된다. on함수를 사용해서 click에 관련된 이벤트 처리는 따로 묶음 처리를 한다. 그러면 유지 보수 하기가 편리해진다.
 
 ---
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%201.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%201.png)
+![2](https://user-images.githubusercontent.com/63957819/108333730-9c2c6680-7214-11eb-9afa-5556bb1d6809.png)
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%202.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%202.png)
+![3](https://user-images.githubusercontent.com/63957819/108333732-9cc4fd00-7214-11eb-99da-01c603b0c95a.png)
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%203.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%203.png)
+![4](https://user-images.githubusercontent.com/63957819/108333734-9cc4fd00-7214-11eb-978b-66c35f02a66a.png)
 
 \" 내용을 쉽게 처리해 줄 수 있는 jackson 라이브러리를 쓰자~ 라이브러리들 끼리의 의존성 의존 관계 즉 dependency라 한다. 
 
 [https://mvnrepository.com/](https://mvnrepository.com/) → maven repository 아주 많은 라이브러리들이 등록되어 있다. 
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%204.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%204.png)
+![5](https://user-images.githubusercontent.com/63957819/108333736-9d5d9380-7214-11eb-8014-8cea32bb1c56.png)
 
 - JacksonTest.java
 
@@ -430,7 +430,7 @@ public class JacksonTest extends HttpServlet {
 
 실행결과>
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%205.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%205.png)
+![6](https://user-images.githubusercontent.com/63957819/108333740-9d5d9380-7214-11eb-96e7-a475d8c4c390.png)
 
 `writeValueAsString()` 메서드는 json형태의 문자열로 바꿔주는 역할을 한다.
 
@@ -528,7 +528,7 @@ public class ViewCartServlet extends HttpServlet {
 
 ---
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%206.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%206.png)
+![7](https://user-images.githubusercontent.com/63957819/108333741-9df62a00-7214-11eb-9086-35b008b778ae.png)
 
 Customer 테이블에는 id라는 컬럼이 있고 Product테이블에는 prod_no 컬럼이 있다.
 
@@ -589,7 +589,7 @@ WHERE table_name = 'ORDER_INFO';
 ALTER TABLE 테이블이름
 DROP CONSTRAINT 제약조건이름;
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%207.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%207.png)
+![8](https://user-images.githubusercontent.com/63957819/108333744-9df62a00-7214-11eb-8e89-0fa251a8ffe5.png)
 
 - semanticcssjq.jsp
 
@@ -1003,7 +1003,7 @@ public class OrderInfo {
 }
 ```
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%208.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%208.png)
+![9](https://user-images.githubusercontent.com/63957819/108333747-9e8ec080-7214-11eb-8d14-0d4d37da81c9.png)
 
 주문정보뿐만아니라 주문자 정보도 담아야 할 필요도 있다면 vo가 has a관계가 있어야 한다.
 
@@ -1063,11 +1063,11 @@ public class OrderLine {
 }
 ```
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%209.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%209.png)
+![10](https://user-images.githubusercontent.com/63957819/108333749-9f275700-7214-11eb-8a3e-a31ff92453e2.png)
 
 ~~private String order_prod_no~~; → private Product p;
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2010.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2010.png)
+![11](https://user-images.githubusercontent.com/63957819/108333752-9fbfed80-7214-11eb-9070-0cf461f1f743.png)
 
 사용자 입장에서의 주문 내역보기
 
@@ -1103,13 +1103,13 @@ public interface OrderDAO {
 }
 ```
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2011.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2011.png)
+![12](https://user-images.githubusercontent.com/63957819/108333755-9fbfed80-7214-11eb-87d7-bcaeb3d2afad.png)
 
 테이블이 order_info, order_line 두 개의 테이블이 있다. order_info 테이블에도 주문정보가 추가 되어야하고 order_line에도 주문정보가 추가 되어야 한다. 주문을 누르게 되면 OrderInfoDAO, OrderLineDAO 이렇게 따로 나누지 않고 OrderDAO 인터페이스 하나로 했다. 추가하거나 삭제 또는 조회할 때 info하고 line하고 항상 같이 다녀야 한다.
 
 OrderDAO 인터페이스를 보면서 OrderService와 OrderDAOOracle 의 구현 작업을 한다.
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2012.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2012.png)
+![13](https://user-images.githubusercontent.com/63957819/108333757-a0588400-7214-11eb-850a-e2545ef38983.png)
 
 - OrderDAOOracle.java
 
@@ -1208,15 +1208,15 @@ public class OrderDAOOracle implements OrderDAO {
 
 내부에서만 쓰일 메서드 private으로 접근 
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2013.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2013.png)
+![14](https://user-images.githubusercontent.com/63957819/108333760-a0588400-7214-11eb-874f-c75b95b24b55.png)
 
 insertInfo, insertLines에 쓰이는 Connection은 서로 다른 거다. 한 세션 만들어서 세션 닫고 또 다른 세연 만들어서 일하고 닫고 하는 거다. 즉 세션이 서로 다르다. 이때 문제가 있다. seq.CURRVAL NEXTVAL를 사용하지 않으면 CURRVAL을 쓸 수 없다.  시퀀스의 NEXTVAL 얻은 다음에 CURRVAL하는건 관계없으나 다른 세션에서는 CURRVAL만 할 수 없다. 반드시 NEXTVAL하고 CURRVAL 해야 한다. 문제를 해결하려면 세션1, 세션2를 같은 세션을 써야 한다.
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2014.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2014.png)
+![15](https://user-images.githubusercontent.com/63957819/108333761-a0f11a80-7214-11eb-9cc1-327cb09c18c5.png)
 
 try블록에서 예외가 발생하면 그 예외를 catch로 잡아야 하는데 catch가 없으면 그 예외가 throws로 떠 넘겨진다. 그냥 throws로 떠 넘겨지는게 아니라 finally 수행하고 떠 넘겨지는 거다.
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2015.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2015.png)
+![16](https://user-images.githubusercontent.com/63957819/108333763-a0f11a80-7214-11eb-80d9-b39fbac05c87.png)
 
 DAOOOracle이 여기저기서 재 사용이 되어야 할 클래스이다. 그래서 일반 어플리케이션할 때에는 HttpSession는 웹에서만 쓰이는 종속적인 api이다. 그래서 재사용성이 높아야하는 DAOOracle에는 적합하지 않다. HttpSession이 웹 전용 api이므로 가장 사용 적절한 곳은 Servlet밖에 없다. 그 외에는 권장되지 않는다.
 
@@ -1680,7 +1680,7 @@ public class PutOrderServlet extends HttpServlet {
 </html>
 ```
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2016.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2016.png)
+![17](https://user-images.githubusercontent.com/63957819/108333764-a189b100-7214-11eb-9c1b-1e191d997553.png)
 
 장바구니 내용을 가져와서 db에 저장해보자 장바구니 정보는 세션에 카트로 있다. 그 값을 가지고 order_info ,order_line 객체를 만들 거다. 로그인 안하고 주문하기 버튼 누를 시 "로그인 하세요"가 뜨고 로그인 시 "주문성공"이 뜬다. 마지막으로 db에 잘 들어갔나 확인해보자~
 
@@ -1692,4 +1692,4 @@ select * from order_line;
 
 실행결과>
 
-![day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2017.png](day08%200e6677ff6d2e47b88c1bb4aba05325da/Untitled%2017.png)
+![18](https://user-images.githubusercontent.com/63957819/108333766-a2224780-7214-11eb-9913-5177318cce19.png)
