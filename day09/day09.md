@@ -365,7 +365,7 @@ rowspan값을 배열의 length를 이용하면 된다.
 </div>
 ```
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled.png)
+![1](https://user-images.githubusercontent.com/63957819/108464143-f552d380-72c2-11eb-95e2-dd07f643373e.png)
 
 multipart/form-data 사용해야 파일 업로드 작업이 수행될 수 있다.
 
@@ -424,27 +424,27 @@ public class UploadServlet extends HttpServlet {
 }
 ```
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%201.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%201.png)
+![2](https://user-images.githubusercontent.com/63957819/108464144-f5eb6a00-72c2-11eb-8a3d-df4e476fb83a.png)
 
 요청의 바디 내용을 getInputStream이라는 메서드로 body의 내용을 조회해 볼 수 있다.
 
 실행결과>
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%202.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%202.png)
+![3](https://user-images.githubusercontent.com/63957819/108464147-f6840080-72c2-11eb-9330-51a4db3836b0.png)
 
 t에 해당하는 값이 test이다. application/octet-stream은 wb 찾아낸 파일의 내용을 서버 쪽으로 무조건 쓰기를 하겠다라는 의미.
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%203.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%203.png)
+![4](https://user-images.githubusercontent.com/63957819/108464148-f6840080-72c2-11eb-99a0-c9c05d752864.png)
 
 실제 업로드 된 file이다.
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%204.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%204.png)
+![5](https://user-images.githubusercontent.com/63957819/108464149-f71c9700-72c2-11eb-8432-999f0c9067c0.png)
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%205.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%205.png)
+![6](https://user-images.githubusercontent.com/63957819/108464152-f71c9700-72c2-11eb-98bc-5c21b115e09c.png)
 
 cos.jar 다운로드 후 복사해서 WEB-INF의 lib에 다 붙여 넣기
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%206.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%206.png)
+![7](https://user-images.githubusercontent.com/63957819/108464153-f7b52d80-72c2-11eb-88a0-15a2e4d2307f.png)
 
 upload파일 만들어주자
 
@@ -452,11 +452,11 @@ upload파일 만들어주자
 
 ---
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%207.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%207.png)
+![8](https://user-images.githubusercontent.com/63957819/108464131-f257e300-72c2-11eb-90f1-4733be15e0f4.png)
 
 다운로드가 요청이 되면 서블릿이 요청 전달 데이터를 분석해서 file을 클라이언트 웹 브라우저에게 응답을 해주도록 하자
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%208.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%208.png)
+![9](https://user-images.githubusercontent.com/63957819/108464135-f2f07980-72c2-11eb-8e92-6496e03ff6cf.png)
 
 DownloadServlet 파일 만들자~ get, post방식 구분하지 않고 service메소드 호출
 
@@ -523,7 +523,7 @@ public class DownloadServlet extends HttpServlet {
 }
 ```
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%209.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%209.png)
+![10](https://user-images.githubusercontent.com/63957819/108464136-f3891000-72c2-11eb-88c0-4cfefb684dbd.png)
 
 - uploadlist.html
 
@@ -564,7 +564,7 @@ $(function(){
 </html>
 ```
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2010.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2010.png)
+![11](https://user-images.githubusercontent.com/63957819/108464138-f3891000-72c2-11eb-8de7-e218def9fd5a.png)
 
 밑에 경로로 하면 보안 문제 때문에 브라우저가 설치되어있는 컴퓨터 자원에 접근을 못한다.
 
@@ -572,7 +572,7 @@ $(function(){
 
 클라이언트 컴퓨터 쪽의 d 드라이브에 있어도 보안 이슈로 html태그로 절대 접근 불가 
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2011.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2011.png)
+![12](https://user-images.githubusercontent.com/63957819/108464139-f421a680-72c2-11eb-9d60-caaae3fa53c2.png)
 
 톰캣 서버 안쪽에 upload밑에 이미지 파일이 있어야 보여진다. d드라이브에 있으며 안된다.
 
@@ -641,12 +641,12 @@ public class UploadServlet extends HttpServlet {
 }
 ```
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2012.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2012.png)
+![13](https://user-images.githubusercontent.com/63957819/108464140-f4ba3d00-72c2-11eb-9b99-1c107a78aae2.png)
 
 myback 밑에 WebContent에 upload 폴더 하나 만들자
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2013.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2013.png)
+![14](https://user-images.githubusercontent.com/63957819/108464141-f4ba3d00-72c2-11eb-848d-d6db30b36972.png)
 
 tomcat 안에 upload파일을 만들고 안에 이미지가 들어간 것을 볼 수 있다.
 
-![day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2014.png](day09%206a8c634a6f88498b8a49204c95d42e6e/Untitled%2014.png)
+![15](https://user-images.githubusercontent.com/63957819/108464142-f552d380-72c2-11eb-99fc-addfa6b2845c.png)
